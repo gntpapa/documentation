@@ -25,13 +25,13 @@ We assume that you have previous knowledge and experience in:
 
 Below specification is a minimum requirement for the testnet application. 
 
-| Desciption    | Minimum Specification for P-Rep TestNet Application | 
-| ------------- | ---------------------------------------------| 
-| CPU Model     | Intel(R) Xeon(R) CPU @ 3.00 GHz | 
-| vCPU (core)   | 2                                            |
-| RAM           | 4 G                                          |
-| Disk          | 100 G                                | 
-| Network       | 1 Gbps                                       | 
+| Desciption    | Minimum Specification                        | Recommended Specifications                   |
+| ------------- | ---------------------------------------------| ---------------------------------------------|
+| CPU Model     | Intel(R) Xeon(R) CPU @ 3.00 GHz              | Intel(R) Xeon(R) CPU @ 3.00GHz               |
+| vCPU (core)   | 16                                           | 36                                           |
+| RAM           | 32 G                                         | 72 G                                         |
+| Disk          | 200 G                                        | 500 G                                        |
+| Network       | 1 Gbps                                       | 1 Gbps                                       |
 
 
 ### SW Requirements
@@ -46,7 +46,7 @@ Below specification is a minimum requirement for the testnet application.
 
 For your reference, ICON node depends on the following packages. The packages are included in the P-Rep docker image that we provide, so you don't need to install them separately. 
 
-- Python 3.6.5 or higher (3.7 is not supported)
+- Python 3.6.5 or higher
 - RabbitMQ 3.7 or higher
 
 
@@ -60,18 +60,10 @@ Above diagram shows how P-Rep nodes are interacting with each other in the test 
 
 
 
-- Endpoint: https://{YOUR_GROUP_NAME}.net.solidwallet.io
+- Endpoint: https://zicon.net.solidwallet.io
 
   - Endpoint is the load balancer that accepts the transaction requests from DApps and relays the requests to an available P-Rep node. In the test environment, ICON foundation is running the endpoint. It is also possible for each P-Rep to setup own endpoint to directly serve DApps (as depicted in PRep-Node4), but that configuration is out of the scope of this document. 
-- Tracker: https://{YOUR_GROUP_NAME}.tracker.solidwallet.io
-
-  - A block and transaction explorer attached to the test network.
-- IP List: https://download.solidwallet.io/conf/{YOUR_GROUP_NAME}_prep_iplist.json
-
-  - ICON foundation will maintain the IP list of P-Reps. The JSON file will contain the list of IPs. You should configure your firewalls to allow in/outbound traffic from/to the IP addresses.  Following TCP ports should be open.
-  - Port 7100: Used by gRPC for peer to peer communication between nodes.
-  - Port 9000: Used by  JSON-RPC API server.
-  - The IP whitelist will be automatically updated on a daily basis from the endpoint of the seed node inside the P-Rep Node Docker.
+- Tracker: https://zicon.tracker.solidwallet.io
 
 
 
