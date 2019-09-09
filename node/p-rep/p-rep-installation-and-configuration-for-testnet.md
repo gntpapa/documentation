@@ -53,7 +53,7 @@ For your reference, ICON node depends on the following packages. The packages ar
 
 ## Network Diagram of P-Rep nodes
 
-![P-Rep Networking Model](../../img/p-rep1.png)
+![P-Rep Networking Model](../../img/p-rep1-1.png)
 
 Above diagram shows how P-Rep nodes are interacting with each other in the test environment. To get access to the testnet, please read the medium post, [P-Rep TestNet Application Open](https://medium.com/helloiconworld/p-rep-testnet-application-open-97e3f7ad1e6d).
 
